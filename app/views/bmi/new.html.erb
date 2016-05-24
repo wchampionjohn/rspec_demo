@@ -1,0 +1,11 @@
+<%= form_tag("/bmi", method: "post") do %>
+  <div class="form-group">
+    <label for="heightInput">身高</label>
+    <input name="height" class="form-control" id="heightInput" placeholder="身高">
+  </div>
+  <div class="form-group">
+    <label for=wight"">體重</label>
+    <input name="weight"  class="form-control" id="weightPassword" placeholder="體重">
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+<% end %>
