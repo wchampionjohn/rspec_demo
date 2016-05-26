@@ -55,4 +55,5 @@ Rails.application.routes.draw do
   #   end
   #
   resources :bmi , only: [ :index , :new , :create ]
+  resources :retired , only: [ :index , :new , :create ]
 end
