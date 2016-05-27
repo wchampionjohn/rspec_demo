@@ -1,18 +1,19 @@
 class Retired
-  def initialize(start_date)
-    @retired_day_count = 365 - (Date.today - start_date.to_date).to_i
+  def initialize(start_date, disconut_days = nil)
+    @retired_days = 365 - (Date.today - start_date.to_date).to_i
+    @retired_days -= disconut_days unless disconut_days.nil?
   end
 
   def calculate
-    @retired_day_count
+    @retired_days
   end
 
   def identity
-    if (@retired_day_count >= 200)
+    if @retired_days >= 200
       '你是菜鳥'
-    elsif (@retired_day_count <= 100 && @retired_day_count > 30)
+    elsif @retired_days < 200 && @retired_days >= 30
       '你是中鳥'
-    elsif(@retired_day_count <= 30)
+    elsif @retired_days < 30
       '待退弟兄'
     end
   end

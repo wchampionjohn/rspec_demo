@@ -14,7 +14,7 @@ RSpec.describe Bmi, type: :model do
       pending
     end
     it "will be show very heavy if bmi >= 35" do
-      expect(Bmi.new(180, 120).output).to eq '重度肥胖abc'
+      expect(Bmi.new(180, 120).output).to eq '重度肥胖'
     end
     it "will be show heavy if bmi >= 30 and < 35" do
       expect(Bmi.new(180, 110).output).to eq '中度肥胖'
